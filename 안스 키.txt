@@ -1,0 +1,27 @@
+C:\Users\LimSeJun\Desktop\numplate\appKey\dacos.jks
+
+password: dacos0907!@#
+
+
+java -jar pepk.jar --keystore=C:\Users\LimSeJun\Desktop\numplate\appKey\dacos.jks --alias=debug-upload --output=C:\Users\LimSeJun\Desktop\numplate\appKey\debug-upload.zip --encryptionkey=eb10fe8f7c7c9df715022017b00c6471f8ba8170b13049a11e6c09ffe3056a104a3bbe4ac5a955f4ba4fe93fc8cef27558a3eb9d2a529a2092761fb833b656cd48b9de6a --include-cert
+
+java -jar pepk.jar --keystore=C:\Users\LimSeJun\Desktop\numplate\appKey\dacos.jks --alias=debug-upload --output=C:\Users\LimSeJun\Desktop\numplate\appKey\debug-upload.zip --include-cert --rsa-aes-encryption --encryption-key-path=C:/Users/LimSeJun/Downloads/encryption_public_key.pem
+
+
+
+릴리즈키 해시
+keytool -exportcert -alias debug-upload -keystore C:\Users\LimSeJun\Desktop\numplate\appKey\dacos.jks | openssl sha1 -binary | openssl base64
+
+Wj8/PzxlP2xDLD8/ewo=
+
+
+플레이 콘솔 릴리즈 SHA-1 인증서 지문
+echo "{9A:CD:D0:D3:63:A4:7D:1B:29:94:E2:EE:FA:9A:F3:3B:1F:B6:87:37}" | xxd -r -p | openssl base64
+ms3Q02OkfRsplOLu+przOx+2hzc=
+
+앱 서명
+echo "{9C:A4:FB:EE:78:FC:22:B6:64:88:57:10:1A:54:59:0E:F6:DA:C2:B3}" | xxd -r -p | openssl base64
+nKT77nj8IrZkiFcQGlRZDvbawrM=
+
+업로드
+echo "{9A:CD:D0:D3:63:A4:7D:1B:29:94:E2:EE:FA:9A:F3:3B:1F:B6:87:37}" | xxd -r -p | openssl base64
